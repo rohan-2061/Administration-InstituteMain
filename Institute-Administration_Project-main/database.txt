@@ -1,0 +1,57 @@
+create database  institute;
+use   institute; 
+create table login(username varchar(30), password varchar(30)); 
+select * from login; 
+insert into login (username, password) values ('admin', 'password123');
+
+create table teacher(name varchar(40) , fname varchar(40) , empID varchar(40), dob varchar(40) , address varchar(40) , phone varchar(40) , email varchar(40) , class_X varchar(40) , class_XII varchar(40), aadhar varchar(40) , education varchar(40), department varchar(40));
+select * from teacher; 
+ 
+create table student(name varchar(40) , fname varchar(40) , rollno varchar(40), dob varchar(40) , address varchar(40) , phone varchar(40) , email varchar(40) , class_X varchar(40) , class_XII varchar(40), aadhar varchar(40) , course varchar(40), branch varchar(40));
+select * from student; 
+ 
+create table studentleave(rollno varchar(20) , date varchar(20) , Time varchar(20), reason varchar(30)); 
+select * from studentleave; 
+ 
+create table teacherleave(empID varchar(20) , date varchar(20) , time varchar(20), reason varchar(30));
+select * from teacherleave; 
+ 
+create table subject(rollno varchar(20), semester varchar(20), sub1 varchar(20),sub2 varchar(20),sub3 varchar(20),sub4 varchar(20),sub5 varchar(20));
+select * from subject; 
+ 
+create table marks(rollno varchar(20), semester varchar(20), mark1 varchar(20),mark2 varchar(20),mark3 varchar(20),mark4 varchar(20),mark5 varchar(20)); 
+select * from marks; 
+ 
+create table fee(course varchar(20), semester1 varchar(20), semester2 
+varchar(20), 	semester3 	varchar(20),semester4 	varchar(20),semester5 
+varchar(20),semester6 	varchar(20),semester7 varchar(20)); 
+select * from fee; 
+INSERT INTO fee (course, semester1, semester2, semester3, semester4, semester5, semester6, semester7)
+VALUES ('B.Tech', '50000', '48000', '47000', '46000', '45000', '44000', '43000');
+INSERT INTO fee (course, semester1, semester2, semester3, semester4, semester5, semester6, semester7)
+VALUES ('MCA', '5000', '4800', '40000', '0', '0', '0', '0');
+INSERT INTO fee (course, semester1, semester2, semester3, semester4, semester5, semester6, semester7)
+VALUES ('MBA', '50000', '48000', '47000', '46000', '45000', '44000', '43000');
+
+ 
+create table feecollege(rollno varchar(20) , course varchar(20) , branch varchar(20), semester varchar(20), total varchar(20));
+INSERT INTO feecollege (rollno, course, branch, semester, total)
+VALUES ('12345', 'MCA', 'Computer Science', '5th', '50000'),
+       ('12346', 'B.Tech', 'Mechanical', '6th', '48000'),
+       ('12347', 'MBA', 'Finance', '3rd', '60000');
+
+select * from feecollege; 
+
+
+ 
+ 
+ 
+  
+ 
+ 
+ 
+  
+ 
+ 
+  
+ 
